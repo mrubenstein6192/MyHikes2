@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
-// import UserHome from './pages/UserHome';
+import UserHome from './pages/UserHome';
 // import AddUpdateEntry from './pages/AddUpdateEntry';
 import Navbar from './components/Navbar';
 import UserContext from './utils/UserContext';
 import { deleteHike, getUserProfile, loginCheck } from './utils/API';
+import AddUpdateHike from './pages/AddUpdateHike';
 
 // import Swal from 'sweetalert2';
 
@@ -74,10 +75,10 @@ class App extends React.Component {
         
         <div>
           <Switch>
-            <Route exact path='/' component={Home}/>
-            {/* <Route exact path='/home' component={UserHome} /> */}
-            {/* <Route exact path='/add' component={AddUpdateEntry} />
-            <Route exact path='/update/:id' component={AddUpdateEntry} /> */}
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/home' component={UserHome} />
+          <Route exact path='/add' component={AddUpdateHike} />
+          <Route exact path='/update/:id' component={AddUpdateHike} />
             
             <Route render={() => 404} />
           </Switch>
