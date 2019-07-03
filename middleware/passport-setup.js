@@ -2,6 +2,7 @@ const passport = require('passport');
 const GoogleStrategy = require('passport-google-oauth20');
 require('dotenv').config();
 const { User } = require('../models');
+const keys = require('./keys');
 
 const redirectPath = process.env.NODE_ENV === "production" ? ('https://rubenstein-myhikes2.herokuapp.com/auth/google/redirect') : ("http://localhost:3001/auth/google/redirect");
 
@@ -19,9 +20,9 @@ passport.deserializeUser((id, done) => {
 passport.use(
   new GoogleStrategy({
     // options for the strategy
-    callbackURL: redirectPath,
-    clientID: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET
+    callbackURL: '/auth/google/redirect',
+    clientID: keys.google.clientID,
+    clientSecret: keys.google.clientSecret
   }, (accessToken, refreshToken, email, done) => {
     // check if user already exists in our db
     User.findOne({googleId: email.id})

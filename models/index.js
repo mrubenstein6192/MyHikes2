@@ -1,4 +1,4 @@
 const User = require('./User');
-const Entry = require('./Entry')
+const Hike = require('./Hike')
 
-module.exports = { User, Entry };
+module.exports = { User, Hike };

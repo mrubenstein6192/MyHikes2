@@ -5,7 +5,7 @@ const {
   getHikeById,
   updateHike,
   deleteHike
-} = require('../../controllers/hikes-controller');
+} = require('../../controllers/hike-controller');
 
 // set up authentication middleware for these routes
 // router.use(authCheck);
