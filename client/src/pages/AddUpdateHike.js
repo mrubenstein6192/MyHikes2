@@ -149,7 +149,7 @@ class AddUpdateHike extends Component {
 
     if (count > 0 && count < questionsJSON.length - 1) {
       button1 =
-        <Button className='form-button' onClick={this.setPreviousQuestion}><i class="fas fa-angle-left mr-1"></i> Prev</Button>
+        <Button className='form-button' onClick={this.setPreviousQuestion}><i className="fas fa-angle-left mr-1"></i> Prev</Button>
     };
 
     if (count < questionsJSON.length - 1) {
@@ -167,33 +167,14 @@ class AddUpdateHike extends Component {
               <Form.Group>
                 <Form.Label>{question.question}</Form.Label>
                 <div className='mb-3'>
-                  <Form.Check
-                    type='checkbox'
-                    key={`${question.id}-yes`}
-                    label='Yes'
-                    value='true'
-                    name={question.name}
-                    onChange={this.handleRadioInputChange}
-                    checked={this.state[question.name]}
-                    inline
-                  />
-                  <Form.Check
-                    type='checkbox'
-                    key={`${question.id}-no`}
-                    label='No'
-                    value='false'
-                    name={question.name}
-                    onChange={this.handleRadioInputChange}
-                    checked={!this.state[question.name]}
-                    inline
-                  />
+                 
                 </div>
                 <Form.Control
                   as='textarea'
                   rows='2'
                   onChange={this.handleInputChange}
-                  name={question.note}
-                  value={this.state[question.note]}
+                  name={question.name}
+                  value={this.state[question.name]}
                   placeholder='Optional Notes'
                   style={{ borderRadius: '50px' }}
                   className='px-4 text-box'

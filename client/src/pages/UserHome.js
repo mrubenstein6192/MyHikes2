@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+// import { Container, Row, Col } from 'react-bootstrap';
 import HikesFlipCard from '../components/HikesFlipCard';
 import UserContext from '../utils/UserContext';
-
+import NavbarTwo from '../components/NavbarTwo';
+import LogoutButton from '../components/LogoutButton';
 
 class UserHome extends Component {
 
@@ -41,8 +42,9 @@ class UserHome extends Component {
           style = {{
             fontWeight: 'bold',
             color: 'black',
+            marginBottom: '10px'
           }}>Welcome to MyHikes!</h1>
-          
+          <LogoutButton />
         </div>
 
         <div className="container"

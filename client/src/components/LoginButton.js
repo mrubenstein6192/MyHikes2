@@ -12,7 +12,7 @@ function LoginButton() {
       href={loginPath}
       eventKey={1}
     >
-      Login with <i className="fab fa-google-plus-g"></i>
+      Login with Google
     </Button>    
   )
 }

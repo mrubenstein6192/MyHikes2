@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import UserHome from './pages/UserHome';
 // import AddUpdateEntry from './pages/AddUpdateEntry';
-import Navbar from './components/Navbar';
+import NavbarTwo from './components/NavbarTwo';
 import UserContext from './utils/UserContext';
 import { deleteHike, getUserProfile, loginCheck } from './utils/API';
 import AddUpdateHike from './pages/AddUpdateHike';
@@ -71,7 +71,7 @@ class App extends React.Component {
     return (
       <Router>
         <UserContext.Provider value={this.state}>
-        <Navbar />
+        <NavbarTwo />
         
         <div>
           <Switch>
